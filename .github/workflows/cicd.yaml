@@ -25,4 +25,4 @@ jobs:
     #steps:
     #- uses: actions/checkout@v3
     #- name: Build the Docker image
-      run: docker run -v /Users/khromau/Documents/config.json:/kaniko/.docker/config.json:ro  gcr.io/kaniko-project/executor:latest  --context=git://github.com/hxilrxiser/hxilrxiser.git --destination=hxilrxiser/trash:latest
+#      run: docker run -v /Users/khromau/Documents/config.json:/kaniko/.docker/config.json:ro  gcr.io/kaniko-project/executor:latest  --context=git://github.com/hxilrxiser/hxilrxiser.git --destination=hxilrxiser/trash:latest
