@@ -1,0 +1,28 @@
+name: Create docker image
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  hadolint:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v3
+    - name: check dockerfile by hadolint   
+      run: docker run --rm -i hadolint/hadolint < Dockerfile
+      
+
+
+
+  #build:
+
+    #runs-on: self-hosted
+
+    #steps:
+    #- uses: actions/checkout@v3
+    #- name: Build the Docker image
+      run: docker run -v /Users/khromau/Documents/config.json:/kaniko/.docker/config.json:ro  gcr.io/kaniko-project/executor:latest  --context=git://github.com/hxilrxiser/hxilrxiser.git --destination=hxilrxiser/trash:latest
