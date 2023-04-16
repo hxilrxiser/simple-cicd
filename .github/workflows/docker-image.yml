@@ -25,8 +25,6 @@ jobs:
       - name: Kaniko build
         uses: aevea/action-kaniko@master
         with:
-          image: aevea/kaniko
+          image: hxilrxiser/python-docker
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          cache: true
-          cache_registry: hxilrxiser/python-docker
