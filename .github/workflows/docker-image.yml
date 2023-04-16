@@ -7,25 +7,6 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-#   build:
-
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - uses: actions/checkout@v3
-#     - name: Build the Docker image
-#       run: docker build . --file Dockerfile --tag app:$(date +%s)
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v2
-#     - name: Set env
-#       run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
-#     - name: Echo github SHA
-#       run: echo $GITHUB_SHA_SHORT
-
-
   build-docker:
     runs-on: ubuntu-latest
     steps:
