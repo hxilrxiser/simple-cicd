@@ -15,6 +15,7 @@ jobs:
       run: docker run --rm -i hadolint/hadolint < Dockerfile
 
   build-docker:
+    needs: hadolint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
